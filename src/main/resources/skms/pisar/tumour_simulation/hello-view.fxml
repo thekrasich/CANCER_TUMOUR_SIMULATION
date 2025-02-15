@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Text?>
+
+<BorderPane xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" prefHeight="400.0" prefWidth="600.0">
+    <!-- UpperMenu -->
+    <top>
+        <MenuBar>
+            <menus>
+                <Menu mnemonicParsing="false" text="File">
+                    <items>
+                        <MenuItem mnemonicParsing="false" text="Close" />
+                    </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="Edit">
+                    <items>
+                        <MenuItem mnemonicParsing="false" text="Delete" />
+                    </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="Help">
+                    <items>
+                        <MenuItem mnemonicParsing="false" text="About" />
+                    </items>
+                </Menu>
+            </menus>
+        </MenuBar>
+    </top>
+
+    <!-- Центральна область, де розміщено панель зліва і область для графіків справа -->
+    <center>
+        <SplitPane dividerPositions="0.3">
+            <items>
+                <!-- Ліва панель: наприклад, VBox з кнопками і текстом -->
+                <VBox spacing="10" prefWidth="180" style="-fx-background-color: #f0f0f0;">
+                    <children>
+                        <Button text="Кнопка 1" />
+                        <Button text="Кнопка 2" />
+                        <Text text="Текстова інформація" />
+                    </children>
+                </VBox>
+                <!-- Права панель: область для відображення графіків -->
+                <AnchorPane style="-fx-background-color: #ffffff;">
+                    <children>
+                        <Text text="Графіки будуть тут" AnchorPane.topAnchor="10" AnchorPane.leftAnchor="10" />
+                        <!-- Сюди можна додати інші елементи або графічні компоненти -->
+                    </children>
+                </AnchorPane>
+            </items>
+        </SplitPane>
+    </center>
+</BorderPane>
